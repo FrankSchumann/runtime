@@ -8,7 +8,7 @@ project (Runtime
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
-file(GLOB SOURCES "src/*.cpp" "src/plugin.c" "src/factory/*.cpp")
+file(GLOB SOURCES "src/plugin.c" "src/factory/*.cpp" "src/components/*.cpp")
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
