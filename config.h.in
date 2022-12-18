@@ -1,0 +1,6 @@
+#define Runtime_VERSION_MAJOR @Runtime_VERSION_MAJOR@
+#define Runtime_VERSION_MINOR @Runtime_VERSION_MINOR@
+
+#include <stdint.h>
+
+constexpr int32_t VERSION_MAJOR = @Runtime_VERSION_MAJOR@;
