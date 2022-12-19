@@ -5,7 +5,7 @@ project (Runtime
 		VERSION 0.0.0.3
 		DESCRIPTION "Runtime plugin")
 		
-set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 file(GLOB SOURCES "src/Plugin.cpp" "src/factory/*.cpp" "src/components/*.cpp")
