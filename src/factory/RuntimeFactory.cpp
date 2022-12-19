@@ -1,5 +1,6 @@
 #include "RuntimeFactory.h"
 
+#include <iostream>
 #include <memory>
 
 #include "../components/RuntimeAdapter.h"
@@ -14,7 +15,9 @@ RuntimeFactory::~RuntimeFactory()
 
 std::shared_ptr< COPA::ComponentIf > RuntimeFactory::create( std::string const &name )
 {
-    return std::make_shared< RuntimeAdapter >(type, name);
+    std::cout << "RuntimeFactory::create" << std::endl;
+
+    return std::make_shared< RuntimeAdapter >( type, name );
 }
 
 std::string RuntimeFactory::getType()
