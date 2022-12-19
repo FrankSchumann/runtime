@@ -1,7 +1,7 @@
 #include <iostream>
 #include <memory>
 
-#include "COPA-PDK/factory/FactoryController.h"
+#include "copa-pdk/factory/FactoryController.h"
 #include "factory/RuntimeFactory.h"
 #include "config.h"
 

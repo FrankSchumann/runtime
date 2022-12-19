@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "COPA-PDK/factory/FactoryIf.h"
+#include "copa-pdk/factory/FactoryIf.h"
 
 class RuntimeFactory : public COPA::FactoryIf
 {
