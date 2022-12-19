@@ -2,7 +2,6 @@
 #include <memory>
 
 #include "COPA-PDK/factory/FactoryController.h"
-
 #include "factory/RuntimeFactory.h"
 
 static void subscribePluginIntern()
@@ -11,7 +10,7 @@ static void subscribePluginIntern()
 
     std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
 
-    std::shared_ptr< COPA::FactoryIf > runtimeFactory = std::make_shared< Runtime::RuntimeFactory >();
+    std::shared_ptr< COPA::FactoryIf > runtimeFactory = std::make_shared< RuntimeFactory >();
 
     factoryController->subscribe( runtimeFactory );
 

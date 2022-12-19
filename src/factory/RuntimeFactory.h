@@ -4,8 +4,6 @@
 
 #include "COPA-PDK/factory/FactoryIf.h"
 
-namespace Runtime
-{
 class RuntimeFactory : public COPA::FactoryIf
 {
    public:
@@ -18,5 +16,3 @@ class RuntimeFactory : public COPA::FactoryIf
    private:
     std::string type;
 };
-
-}
