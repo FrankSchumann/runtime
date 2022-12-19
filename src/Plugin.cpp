@@ -3,6 +3,7 @@
 
 #include "COPA-PDK/factory/FactoryController.h"
 #include "factory/RuntimeFactory.h"
+#include "config.h"
 
 extern "C" void subscribePlugin()
 {
@@ -15,4 +16,14 @@ extern "C" void subscribePlugin()
     factoryController->subscribe( runtimeFactory );
 
     factoryController->doSomething();
+}
+
+extern "C" const char* getName()
+{
+	return PLUGIN_NAME.c_str();
+}
+
+extern "C" const char* getVersion()
+{
+	return PLUGIN_VERSION.c_str();
 }
