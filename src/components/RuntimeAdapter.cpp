@@ -1,5 +1,7 @@
 #include "RuntimeAdapter.h"
 
+#include <iostream>
+
 RuntimeAdapter::RuntimeAdapter(std::string const &_type, std::string const &_name) : type(_type), name(_name)
 {
 }
@@ -25,6 +27,7 @@ std::string RuntimeAdapter::getVersion()
 
 void RuntimeAdapter::startApplications()
 {
+	std::cout << "RuntimeAdapter::startApplications" << std::endl;
 }
 
 void RuntimeAdapter::stopApplications()
