@@ -8,8 +8,9 @@ RuntimeFactory::~RuntimeFactory()
 {
 }
 
-void RuntimeFactory::create()
+std::shared_ptr< COPA::ComponentIf > RuntimeFactory::create( std::string const &name )
 {
+    return nullptr;
 }
 
 std::string RuntimeFactory::getType()
