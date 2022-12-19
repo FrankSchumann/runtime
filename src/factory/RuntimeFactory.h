@@ -6,11 +6,11 @@
 
 namespace Runtime
 {
-class Factory : public COPA::FactoryIf
+class RuntimeFactory : public COPA::FactoryIf
 {
    public:
-    Factory();
-    virtual ~Factory();
+    RuntimeFactory();
+    virtual ~RuntimeFactory();
 
     virtual void create() override;
     virtual std::string getType() override;
