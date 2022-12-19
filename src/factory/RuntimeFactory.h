@@ -1,8 +1,10 @@
 #pragma once
 
 #include <string>
+#include <memory>
 
 #include "copa-pdk/factory/FactoryIf.h"
+#include "copa-pdk/component/ComponentIf.h"
 
 class RuntimeFactory : public COPA::FactoryIf
 {
