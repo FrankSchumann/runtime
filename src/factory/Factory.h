@@ -1,22 +1,22 @@
 #pragma once
 
-#include "COPA-PDK/factory/FactoryIf.h"
 #include <string>
+
+#include "COPA-PDK/factory/FactoryIf.h"
 
 namespace Runtime
 {
-
 class Factory : public COPA::FactoryIf
 {
-public:
-	Factory(std::string const &_name);
-	virtual ~Factory();
+   public:
+    Factory();
+    virtual ~Factory();
 
-	virtual void create() override;
-	virtual std::string getName() override;
+    virtual void create() override;
+    virtual std::string getType() override;
 
-private:
-	std::string name;
+   private:
+    std::string type;
 };
 
 }

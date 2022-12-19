@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.12)
 
 # Set some basic project attributes
 project (Runtime
-		VERSION 0.0.0.1
+		VERSION 0.0.0.2
 		DESCRIPTION "Runtime plugin")
 		
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
-file(GLOB SOURCES "src/plugin.c" "src/factory/*.cpp" "src/components/*.cpp")
+file(GLOB SOURCES "src/Plugin.cpp" "src/factory/*.cpp" "src/components/*.cpp")
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 

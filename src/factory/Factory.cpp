@@ -2,7 +2,7 @@
 
 namespace Runtime
 {
-Factory::Factory( std::string const &_name ) : name( _name )
+Factory::Factory() : type( "Runtime" )
 {
 }
 
@@ -14,9 +14,9 @@ void Factory::create()
 {
 }
 
-std::string Factory::getName()
+std::string Factory::getType()
 {
-    return name;
+    return type;
 }
 
 }
