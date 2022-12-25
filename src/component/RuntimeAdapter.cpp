@@ -25,7 +25,7 @@ std::string RuntimeAdapter::getVersion() const
     return std::string( "0.0.0.1" );
 }
 
-void RuntimeAdapter::startApplications()
+void RuntimeAdapter::startApplications() const
 {
     std::cout << "RuntimeAdapter::startApplications" << std::endl;
 
@@ -37,7 +37,7 @@ void RuntimeAdapter::startApplications()
     }
 }
 
-void RuntimeAdapter::stopApplications()
+void RuntimeAdapter::stopApplications() const
 {
     std::cout << "RuntimeAdapter::stopApplications" << std::endl;
 
