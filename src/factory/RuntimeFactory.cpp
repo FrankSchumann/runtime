@@ -3,7 +3,7 @@
 #include <iostream>
 #include <memory>
 
-#include "../components/RuntimeAdapter.h"
+#include "../component/RuntimeAdapter.h"
 
 RuntimeFactory::RuntimeFactory() : type( "RuntimeAdapter" )
 {
