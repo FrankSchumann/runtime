@@ -5,7 +5,7 @@
 
 #include "../component/RuntimeAdapter.h"
 
-RuntimeFactory::RuntimeFactory() : type( "RuntimeAdapter" )
+RuntimeFactory::RuntimeFactory()
 {
 }
 

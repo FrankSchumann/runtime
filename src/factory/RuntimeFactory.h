@@ -1,10 +1,10 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
-#include "copa-pdk/factory/FactoryIf.h"
 #include "copa-pdk/component/ComponentIf.h"
+#include "copa-pdk/factory/FactoryIf.h"
 
 class RuntimeFactory : public COPA::FactoryIf
 {
@@ -16,5 +16,5 @@ class RuntimeFactory : public COPA::FactoryIf
     virtual std::string getType() override;
 
    private:
-    std::string type;
+    const std::string type = std::string( "RuntimeAdapter" );
 };
