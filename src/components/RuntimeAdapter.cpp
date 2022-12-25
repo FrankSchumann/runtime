@@ -28,14 +28,31 @@ std::string RuntimeAdapter::getVersion()
 void RuntimeAdapter::startApplications()
 {
     std::cout << "RuntimeAdapter::startApplications" << std::endl;
+
+    for ( auto const &[ name, runtime ] : runtimes )
+    {
+        std::cout << "name: " << name << std::endl;
+
+        runtime->startApplications();
+    }
 }
 
 void RuntimeAdapter::stopApplications()
 {
+    std::cout << "RuntimeAdapter::stopApplications" << std::endl;
+
+    for ( auto const &[ name, runtime ] : runtimes )
+    {
+        std::cout << "name: " << name << std::endl;
+
+        runtime->stopApplications();
+    }
 }
 
 void RuntimeAdapter::subscribe( std::string const &name, std::shared_ptr< RuntimeIf > const runtime )
 {
+    std::cout << "RuntimeAdapter::subscribe "
+              << "name: " << name;
     runtimes[ name ] = runtime;
 }
 
