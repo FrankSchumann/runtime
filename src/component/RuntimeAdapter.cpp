@@ -10,17 +10,17 @@ RuntimeAdapter::~RuntimeAdapter()
 {
 }
 
-std::string RuntimeAdapter::getType()
+std::string RuntimeAdapter::getType() const
 {
     return type;
 }
 
-std::string RuntimeAdapter::getName()
+std::string RuntimeAdapter::getName() const
 {
     return name;
 }
 
-std::string RuntimeAdapter::getVersion()
+std::string RuntimeAdapter::getVersion() const
 {
     return std::string( "0.0.0.1" );
 }

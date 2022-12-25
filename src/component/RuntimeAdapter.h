@@ -13,9 +13,9 @@ class RuntimeAdapter : public RuntimeAdapterIf
     RuntimeAdapter( std::string const &_type, std::string const &_name );
     ~RuntimeAdapter();
 
-    virtual std::string getType() override;
-    virtual std::string getName() override;
-    virtual std::string getVersion() override;
+    virtual std::string getType() const override;
+    virtual std::string getName() const override;
+    virtual std::string getVersion() const override;
 
     virtual void startApplications() override;
     virtual void stopApplications() override;
