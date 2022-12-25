@@ -12,8 +12,8 @@ class RuntimeFactory : public COPA::FactoryIf
     RuntimeFactory();
     virtual ~RuntimeFactory();
 
-    virtual std::shared_ptr< COPA::ComponentIf > create( std::string const &name ) override;
-    virtual std::string getType() override;
+    virtual std::shared_ptr< COPA::ComponentIf > create( std::string const &name ) const override;
+    virtual std::string getType() const override;
 
    private:
     const std::string type = std::string( "RuntimeAdapter" );
