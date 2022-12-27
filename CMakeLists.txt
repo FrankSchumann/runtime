@@ -18,3 +18,5 @@ configure_file(config.h.in config.h)
 include_directories("${PROJECT_BINARY_DIR}" include)
 
 message("CMAKE_PROJECT_VERSION = ${CMAKE_PROJECT_VERSION}")
+
+set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_VERSION})
