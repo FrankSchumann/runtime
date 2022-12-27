@@ -7,13 +7,15 @@
 
 extern "C" void subscribePlugin()
 {
-    std::cout << "Runtime - subscribePlugin2" << std::endl;
+    std::cout << "runtime - subscribePlugin" << std::endl;
 
     std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
 
     std::shared_ptr< COPA::FactoryIf > runtimeFactory = std::make_shared< RuntimeFactory >();
 
     factoryController->subscribe( runtimeFactory );
+
+    std::cout << std::endl;
 }
 
 extern "C" const char* getName()
