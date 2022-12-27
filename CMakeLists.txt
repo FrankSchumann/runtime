@@ -15,8 +15,6 @@ add_library(${PROJECT_NAME} SHARED ${SOURCES})
 # Create a simple configuration header
 configure_file(config.h.in config.h)
 
-# Include the configuration header in the build
-#target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_BINARY_DIR}" include)
 include_directories("${PROJECT_BINARY_DIR}" include)
 
 message("CMAKE_PROJECT_VERSION = ${CMAKE_PROJECT_VERSION}")
