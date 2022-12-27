@@ -14,8 +14,6 @@ extern "C" void subscribePlugin()
     std::shared_ptr< COPA::FactoryIf > runtimeFactory = std::make_shared< RuntimeFactory >();
 
     factoryController->subscribe( runtimeFactory );
-
-    factoryController->doSomething();
 }
 
 extern "C" const char* getName()
