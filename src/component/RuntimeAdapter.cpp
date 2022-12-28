@@ -25,6 +25,8 @@ void RuntimeAdapter::startApplications() const
 {
     std::cout << "RuntimeAdapter::startApplications" << std::endl;
 
+    auto const runtimes = runtimeController->getAll();
+
     for ( auto const &[ name, runtime ] : runtimes )
     {
         std::cout << "name: " << name << std::endl;
@@ -36,6 +38,8 @@ void RuntimeAdapter::startApplications() const
 void RuntimeAdapter::stopApplications() const
 {
     std::cout << "RuntimeAdapter::stopApplications" << std::endl;
+
+    auto const runtimes = runtimeController->getAll();
 
     for ( auto const &[ name, runtime ] : runtimes )
     {
