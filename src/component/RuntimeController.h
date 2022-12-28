@@ -15,6 +15,7 @@ class RuntimeController : public RuntimeControllerIf
 
     virtual void subscribe( std::string const &name, std::shared_ptr< RuntimeIf > const runtime ) override;
     virtual std::shared_ptr< RuntimeIf > get( std::string const &name ) const override;
+    virtual std::map< std::string, std::shared_ptr< RuntimeIf > > getAll() const override;
 
     virtual std::string getType() const override;
     virtual std::string getName() const override;

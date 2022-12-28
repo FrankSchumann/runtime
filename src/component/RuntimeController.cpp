@@ -31,6 +31,11 @@ std::shared_ptr< RuntimeIf > RuntimeController::get( std::string const &name ) c
     return result;
 }
 
+std::map< std::string, std::shared_ptr< RuntimeIf > > RuntimeController::getAll() const
+{
+	return runtimes;
+}
+
 std::string RuntimeController::getType() const
 {
     return type;
