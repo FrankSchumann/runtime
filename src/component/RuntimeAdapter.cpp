@@ -10,21 +10,6 @@ RuntimeAdapter::~RuntimeAdapter()
 {
 }
 
-std::string RuntimeAdapter::getType() const
-{
-    return type;
-}
-
-std::string RuntimeAdapter::getName() const
-{
-    return name;
-}
-
-std::string RuntimeAdapter::getVersion() const
-{
-    return std::string( "0.0.0.2" );
-}
-
 void RuntimeAdapter::startApplications() const
 {
     std::cout << "RuntimeAdapter::startApplications" << std::endl;
@@ -67,4 +52,19 @@ std::shared_ptr< RuntimeIf > RuntimeAdapter::get( std::string const &name ) cons
     }
 
     return result;
+}
+
+std::string RuntimeAdapter::getType() const
+{
+    return type;
+}
+
+std::string RuntimeAdapter::getName() const
+{
+    return name;
+}
+
+std::string RuntimeAdapter::getVersion() const
+{
+    return std::string( "0.0.0.2" );
 }
