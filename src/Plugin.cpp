@@ -1,9 +1,10 @@
 #include <iostream>
 #include <memory>
 
-#include "copa-pdk/factory/FactoryController.h"
 #include "config.h"
+#include "copa-pdk/factory/FactoryController.h"
 #include "factory/RuntimeAdapterFactory.h"
+#include "factory/RuntimeControllerFactory.h"
 
 extern "C" void subscribePlugin()
 {
@@ -11,19 +12,21 @@ extern "C" void subscribePlugin()
 
     std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
 
-    std::shared_ptr< COPA::FactoryIf > runtimeFactory = std::make_shared< RuntimeAdapterFactory >();
+    std::shared_ptr< COPA::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    std::shared_ptr< COPA::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
-    factoryController->subscribe( runtimeFactory );
+    factoryController->subscribe( runtimeAdapterFactory );
+    factoryController->subscribe( runtimeControllerFactory );
 
     std::cout << std::endl;
 }
 
 extern "C" const char* getName()
 {
-	return PLUGIN_NAME.c_str();
+    return PLUGIN_NAME.c_str();
 }
 
 extern "C" const char* getVersion()
 {
-	return PLUGIN_VERSION.c_str();
+    return PLUGIN_VERSION.c_str();
 }
