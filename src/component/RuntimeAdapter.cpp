@@ -1,8 +1,16 @@
 #include "../component/RuntimeAdapter.h"
 
+#include "copa-pdk/component/ComponentController.h"
+
 #include <iostream>
 
-RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name ) : type( _type ), name( _name )
+RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name ) : RuntimeAdapter( _type,  _name, std::make_shared<COPA::ComponentController>() )
+{
+}
+
+RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name,
+                                std::shared_ptr< COPA::ComponentControllerIf > _componentController )
+    : type( _type ), name( _name ), componentController( _componentController )
 {
 }
 

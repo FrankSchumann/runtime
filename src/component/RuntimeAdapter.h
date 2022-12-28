@@ -6,11 +6,13 @@
 
 #include "runtime-sdk/RuntimeAdapterIf.h"
 #include "runtime-sdk/RuntimeIf.h"
+#include "copa-pdk/component/ComponentControllerIf.h"
 
 class RuntimeAdapter : public RuntimeAdapterIf
 {
    public:
     RuntimeAdapter( std::string const &_type, std::string const &_name );
+    RuntimeAdapter( std::string const &_type, std::string const &_name, std::shared_ptr< COPA::ComponentControllerIf > _componentController);
     ~RuntimeAdapter();
 
     virtual void startApplications() const override;
@@ -24,6 +26,7 @@ class RuntimeAdapter : public RuntimeAdapterIf
 
    private:
     std::map< std::string, std::shared_ptr< RuntimeIf > > runtimes;
+    std::shared_ptr< COPA::ComponentControllerIf > componentController;
 
     std::string type;
     std::string name;
