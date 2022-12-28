@@ -22,7 +22,7 @@ std::string RuntimeAdapter::getName() const
 
 std::string RuntimeAdapter::getVersion() const
 {
-    return std::string( "0.0.0.1" );
+    return std::string( "0.0.0.2" );
 }
 
 void RuntimeAdapter::startApplications() const
