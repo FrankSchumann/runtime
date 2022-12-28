@@ -49,26 +49,6 @@ void RuntimeAdapter::stopApplications() const
     }
 }
 
-void RuntimeAdapter::subscribe( std::string const &name, std::shared_ptr< RuntimeIf > const runtime )
-{
-    std::cout << "RuntimeAdapter::subscribe "
-              << "name: " << name;
-    runtimes[ name ] = runtime;
-}
-
-std::shared_ptr< RuntimeIf > RuntimeAdapter::get( std::string const &name ) const
-{
-    std::shared_ptr< RuntimeIf > result( nullptr );
-
-    auto const it = runtimes.find( name );
-    if ( it != runtimes.end() )
-    {
-        result = it->second;
-    }
-
-    return result;
-}
-
 std::string RuntimeAdapter::getType() const
 {
     return type;
