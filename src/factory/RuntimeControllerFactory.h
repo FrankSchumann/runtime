@@ -10,7 +10,6 @@ class RuntimeControllerFactory : public COPA::FactoryIf
 {
    public:
     RuntimeControllerFactory();
-    virtual ~RuntimeControllerFactory();
 
     virtual std::shared_ptr< COPA::ComponentIf > create( std::string const &name ) const override;
     virtual std::string getType() const override;

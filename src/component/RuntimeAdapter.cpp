@@ -17,10 +17,6 @@ RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_na
     runtimeController = std::reinterpret_pointer_cast< RuntimeControllerIf >( runtimeControllerTmp );
 }
 
-RuntimeAdapter::~RuntimeAdapter()
-{
-}
-
 void RuntimeAdapter::startApplications() const
 {
     std::cout << "RuntimeAdapter::startApplications" << std::endl;

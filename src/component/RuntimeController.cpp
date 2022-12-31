@@ -2,19 +2,15 @@
 
 #include <iostream>
 
-RuntimeController::RuntimeController( std::string const &_type, std::string const &_name ) : type( _type ), name( _name )
+RuntimeController::RuntimeController( std::string const &_type, std::string const &_name )
+    : type( _type ), name( _name )
 {
 }
-
-RuntimeController::~RuntimeController()
-{
-}
-
 
 void RuntimeController::subscribe( std::string const &name, std::shared_ptr< RuntimeIf > const runtime )
 {
-    std::cout << "RuntimeAdapter::subscribe "
-              << "name: " << name;
+    std::cout << "RuntimeController::subscribe "
+              << "name: " << name << std::endl;
     runtimes[ name ] = runtime;
 }
 
@@ -33,7 +29,7 @@ std::shared_ptr< RuntimeIf > RuntimeController::get( std::string const &name ) c
 
 std::map< std::string, std::shared_ptr< RuntimeIf > > RuntimeController::getAll() const
 {
-	return runtimes;
+    return runtimes;
 }
 
 std::string RuntimeController::getType() const

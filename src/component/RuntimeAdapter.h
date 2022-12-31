@@ -15,7 +15,6 @@ class RuntimeAdapter : public RuntimeAdapterIf
     RuntimeAdapter( std::string const &_type, std::string const &_name );
     RuntimeAdapter( std::string const &_type, std::string const &_name,
                     std::shared_ptr< COPA::ComponentControllerIf > componentController );
-    ~RuntimeAdapter();
 
     virtual void startApplications() const override;
     virtual void stopApplications() const override;

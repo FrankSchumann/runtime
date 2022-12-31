@@ -9,10 +9,6 @@ RuntimeControllerFactory::RuntimeControllerFactory()
 {
 }
 
-RuntimeControllerFactory::~RuntimeControllerFactory()
-{
-}
-
 std::shared_ptr< COPA::ComponentIf > RuntimeControllerFactory::create( std::string const &name ) const
 {
     std::cout << "RuntimeControllerFactory::create" << std::endl;
