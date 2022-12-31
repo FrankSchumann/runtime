@@ -21,6 +21,13 @@ extern "C" void subscribePlugin()
     std::cout << std::endl;
 }
 
+extern "C" void unsubscribePlugin()
+{
+    std::cout << "runtime - unsubscribePlugin" << std::endl;
+
+    std::cout << std::endl;
+}
+
 extern "C" const char* getName()
 {
     return PLUGIN_NAME.c_str();
