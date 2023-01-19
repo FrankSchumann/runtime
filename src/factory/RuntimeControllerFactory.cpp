@@ -20,3 +20,10 @@ std::string RuntimeControllerFactory::getType() const
 {
     return type;
 }
+
+std::vector< std::string > RuntimeControllerFactory::getDependencies() const
+{
+    std::vector< std::string > result;
+
+    return result;
+}

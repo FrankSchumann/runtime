@@ -20,3 +20,10 @@ std::string RuntimeAdapterFactory::getType() const
 {
     return type;
 }
+
+std::vector< std::string > RuntimeAdapterFactory::getDependencies() const
+{
+    std::vector< std::string > result;
+
+    return result;
+}
