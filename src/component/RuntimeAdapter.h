@@ -5,9 +5,9 @@
 #include <string>
 
 #include "copa-pdk/component/ComponentControllerIf.h"
-#include "runtime-sdk/RuntimeAdapterIf.h"
-#include "runtime-sdk/RuntimeControllerIf.h"
-#include "runtime-sdk/RuntimeIf.h"
+#include "RuntimeAdapterIf.h"
+#include "RuntimeControllerIf.h"
+#include "RuntimeIf.h"
 
 class RuntimeAdapter : public RuntimeAdapterIf
 {
