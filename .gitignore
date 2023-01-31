@@ -32,6 +32,8 @@ NoDebug/
 /build/
 /.settings/
 /vxsim_VSB_SIMNTllvm_LP64_ld/
+*/test_output/
+*/CMakeUserPresets.json
 
 /.project
 /.cproject
