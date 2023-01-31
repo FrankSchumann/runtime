@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 
 # Set some basic project attributes
-project (Runtime
-		VERSION 0.0.0.9
+project (runtime
+		VERSION 0.0.0.10
 		DESCRIPTION "Runtime plugin")
 		
 set(CMAKE_BUILD_TYPE Debug)
