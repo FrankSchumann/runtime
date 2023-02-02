@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "component/ComponentIf.h"
+#include <copa/component/ComponentIf.h>
 #include "RuntimeIf.h"
 
 class RuntimeAdapterIf : public COPA::ComponentIf
