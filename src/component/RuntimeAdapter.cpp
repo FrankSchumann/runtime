@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "copa-pdk/component/ComponentController.h"
+#include "copa/component/ComponentController.h"
 
 RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name )
     : RuntimeAdapter( _type, _name, std::make_shared< COPA::ComponentController >() )
