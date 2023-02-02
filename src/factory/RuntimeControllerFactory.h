@@ -3,8 +3,8 @@
 #include <memory>
 #include <string>
 
-#include "copa/component/ComponentIf.h"
-#include "copa/factory/FactoryIf.h"
+#include "component/ComponentIf.h"
+#include "factory/FactoryIf.h"
 
 class RuntimeControllerFactory : public COPA::FactoryIf
 {

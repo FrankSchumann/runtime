@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-#include "copa/component/ComponentControllerIf.h"
+#include "component/ComponentControllerIf.h"
 #include "RuntimeAdapterIf.h"
 #include "RuntimeControllerIf.h"
 #include "RuntimeIf.h"

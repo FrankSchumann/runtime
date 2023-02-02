@@ -4,7 +4,7 @@ from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 
 class osalRecipe(ConanFile):
     name = "runtime"
-    version = "0.0.2"
+    version = "0.0.3"
 
     # Optional metadata
     license = "<Put the package license here>"
@@ -19,14 +19,15 @@ class osalRecipe(ConanFile):
     default_options = {"shared": True, "fPIC": True}
 
     # Sources are located in the same place as this recipe, copy them to the recipe
-    exports_sources = "CMakeLists.txt", "config.h.in", "src/*", "include/*", "extern_include/*"
+    exports_sources = "CMakeLists.txt", "config.h.in", "src/*", "include/*"
+
+    def requirements(self):
+        self.requires("copa/0.0.1")
+        self.requires("osal/0.0.2")
 
     def config_options(self):
         if self.settings.os == "Windows":
             del self.options.fPIC
-
-    def layout(self):
-        cmake_layout(self)
 
     def generate(self):
         deps = CMakeDeps(self)
