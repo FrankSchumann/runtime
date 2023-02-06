@@ -1,6 +1,8 @@
 #pragma once
 
 #include <string>
+#include <memory>
+#include <map>
 
 #include <copa/component/ComponentIf.h>
 #include "RuntimeIf.h"

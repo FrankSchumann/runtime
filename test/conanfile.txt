@@ -1,6 +1,6 @@
 [requires]
-copa/[0.0.2]
-osal/[0.0.2]
+copa/0.0.2
+osal/0.0.2
 
 [generators]
 CMakeDeps

@@ -11,6 +11,7 @@ class osalTestConan(ConanFile):
 
     def requirements(self):
         self.requires(self.tested_reference_str)
+        self.requires("copa/[~0.0.0]")
 
     def build(self):
         cmake = CMake(self)
