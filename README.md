@@ -46,6 +46,23 @@ runtime $ cmake .. --preset debug
 runtime $ cmake --build . -- -j4
 ```
 
+# Test
+Build and execute GoogleTest.
+
+```bash
+runtime/build/test $ conan install . --output-folder=build
+```
+```bash
+runtime/build/test $ cd build
+runtime/build/test $ cmake .. --preset=release
+```
+```bash
+runtime/build/test $ cmake --build .
+```
+```bash
+runtime/build/test $ ./runtimeTest
+```
+
 # Import Projects
 
 ## Eclipse CDT
