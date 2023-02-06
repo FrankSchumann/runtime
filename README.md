@@ -57,7 +57,7 @@ runtime/build/test $ cd build
 runtime/build/test $ cmake .. --preset=release
 ```
 ```bash
-runtime/build/test $ cmake --build .
+runtime/build/test $ cmake --build . -- -j4
 ```
 ```bash
 runtime/build/test $ ./runtimeTest
