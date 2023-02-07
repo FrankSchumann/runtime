@@ -4,8 +4,8 @@
 #include <memory>
 #include <string>
 
-#include "runtime-sdk/RuntimeControllerIf.h"
-#include "runtime-sdk/RuntimeIf.h"
+#include "RuntimeControllerIf.h"
+#include "RuntimeIf.h"
 
 class RuntimeController : public RuntimeControllerIf
 {

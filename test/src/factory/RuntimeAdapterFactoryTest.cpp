@@ -17,7 +17,7 @@ TEST( RuntimeAdapterFactoryTest, create )
     ASSERT_NE( nullptr, runtimeAdapter );
 
     ASSERT_EQ( name, runtimeAdapter->getName() );
-    ASSERT_EQ( std::string( "RuntimeController" ), runtimeAdapter->getType() );
+    ASSERT_EQ( std::string( "RuntimeAdapter" ), runtimeAdapter->getType() );
 
 }
 
