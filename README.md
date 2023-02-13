@@ -50,17 +50,17 @@ runtime $ cmake --build . -- -j4
 Build and execute GoogleTest.
 
 ```bash
-runtime/build/test $ conan install . --output-folder=build
+runtime/test $ conan install . --output-folder=build
 ```
 ```bash
-runtime/build/test $ cd build
-runtime/build/test $ cmake .. --preset=release
+runtime/test $ cd build
+runtime/test/build $ cmake .. --preset=release
 ```
 ```bash
-runtime/build/test $ cmake --build . -- -j4
+runtime/test/build $ cmake --build . -- -j4
 ```
 ```bash
-runtime/build/test $ ./runtimeTest
+runtime/test/build $ ./runtimeTest
 ```
 
 # Import Projects
