@@ -6,7 +6,7 @@
 Build and upload package to Conan cache.
 
 ```bash
-copa $ conan create .
+runtime $ conan create .
 ```
 
 ## Install
