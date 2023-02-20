@@ -4,10 +4,10 @@
 #include <memory>
 #include <map>
 
-#include <copa/component/ComponentIf.h>
+#include <core/component/ComponentIf.h>
 #include "RuntimeIf.h"
 
-class RuntimeControllerIf : public COPA::ComponentIf
+class RuntimeControllerIf : public core::ComponentIf
 {
    public:
     virtual void subscribe( std::string const& name, std::shared_ptr< RuntimeIf > const runtime ) = 0;

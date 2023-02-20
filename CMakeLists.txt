@@ -2,7 +2,7 @@ cmake_minimum_required( VERSION 3.15 )
 
 # Set some basic project attributes
 project (runtime
-		VERSION 0.0.0.10
+		VERSION 0.0.0.11
 		DESCRIPTION "Runtime plugin")
 		
 set( CMAKE_BUILD_TYPE Debug )
@@ -12,7 +12,7 @@ file( GLOB_RECURSE PROJECT_SOURCE_FILES src/*.cpp )
 
 file( GLOB_RECURSE PROJECT_INCLUDE_FILES "include/*.h" )
 
-find_package( copa CONFIG REQUIRED )
+find_package( core CONFIG REQUIRED )
 find_package( osal CONFIG REQUIRED )
 
 add_library( ${PROJECT_NAME} ${PROJECT_INCLUDE_FILES} ${PROJECT_SOURCE_FILES} )
@@ -20,7 +20,7 @@ add_library( ${PROJECT_NAME} ${PROJECT_INCLUDE_FILES} ${PROJECT_SOURCE_FILES} )
 # Create a simple configuration header
 configure_file( config.h.in config.h )
 
-include_directories( ${PROJECT_BINARY_DIR} include ${copa_INCLUDE_DIR} ${osal_INCLUDE_DIR} )
+include_directories( ${PROJECT_BINARY_DIR} include ${core_INCLUDE_DIR} ${osal_INCLUDE_DIR} )
 
 install( TARGETS ${PROJECT_NAME} )
 install( DIRECTORY include/ DESTINATION include/${PROJECT_NAME} )

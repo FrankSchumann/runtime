@@ -3,15 +3,15 @@
 #include <memory>
 #include <string>
 
-#include <copa/component/ComponentIf.h>
-#include <copa/factory/FactoryIf.h>
+#include <core/component/ComponentIf.h>
+#include <core/factory/FactoryIf.h>
 
-class RuntimeControllerFactory : public COPA::FactoryIf
+class RuntimeControllerFactory : public core::FactoryIf
 {
    public:
     RuntimeControllerFactory();
 
-    virtual std::shared_ptr< COPA::ComponentIf > create( std::string const &name ) const override;
+    virtual std::shared_ptr< core::ComponentIf > create( std::string const &name ) const override;
     virtual std::string getType() const override;
     virtual std::vector< std::string > getDependencies() const override;
 

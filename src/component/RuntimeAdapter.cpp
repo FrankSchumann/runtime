@@ -2,15 +2,15 @@
 
 #include <iostream>
 
-#include <copa/component/ComponentController.h>
+#include <core/component/ComponentController.h>
 
 RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name )
-    : RuntimeAdapter( _type, _name, std::make_shared< COPA::ComponentController >() )
+    : RuntimeAdapter( _type, _name, std::make_shared< core::ComponentController >() )
 {
 }
 
 RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name,
-                                std::shared_ptr< COPA::ComponentControllerIf > componentController )
+                                std::shared_ptr< core::ComponentControllerIf > componentController )
     : type( _type ), name( _name )
 {
     auto const runtimeControllerTmp = componentController->get( "RuntimeController", "Mickey Mouse" );

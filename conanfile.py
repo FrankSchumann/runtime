@@ -4,7 +4,7 @@ from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 
 class osalRecipe(ConanFile):
     name = "runtime"
-    version = "0.0.4"
+    version = "0.0.5"
 
     # Optional metadata
     license = "<Put the package license here>"
@@ -22,7 +22,7 @@ class osalRecipe(ConanFile):
     exports_sources = "CMakeLists.txt", "config.h.in", "src/*", "include/*"
 
     def requirements(self):
-        self.requires("copa/0.0.2")
+        self.requires("core/0.0.1")
         self.requires("osal/0.0.2")
 
     def config_options(self):

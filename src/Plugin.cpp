@@ -2,8 +2,8 @@
 #include <memory>
 
 #include "config.h"
-#include <copa/factory/FactoryController.h>
-#include <copa/component/ComponentController.h>
+#include <core/factory/FactoryController.h>
+#include <core/component/ComponentController.h>
 #include "factory/RuntimeAdapterFactory.h"
 #include "factory/RuntimeControllerFactory.h"
 
@@ -11,10 +11,10 @@ extern "C" void subscribePlugin()
 {
     std::cout << "runtime - subscribePlugin" << std::endl;
 
-    std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
+    std::shared_ptr< core::FactoryController > factoryController = std::make_shared< core::FactoryController >();
 
-    std::shared_ptr< COPA::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
-    std::shared_ptr< COPA::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
+    std::shared_ptr< core::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    std::shared_ptr< core::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
     factoryController->subscribe( runtimeAdapterFactory );
     factoryController->subscribe( runtimeControllerFactory );
@@ -26,12 +26,12 @@ extern "C" void unsubscribePlugin()
 {
     std::cout << "runtime - unsubscribePlugin" << std::endl;
 
-    std::shared_ptr< COPA::ComponentController > componentController = std::make_shared< COPA::ComponentController >();
+    std::shared_ptr< core::ComponentController > componentController = std::make_shared< core::ComponentController >();
 
-    std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
+    std::shared_ptr< core::FactoryController > factoryController = std::make_shared< core::FactoryController >();
 
-    std::shared_ptr< COPA::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
-    std::shared_ptr< COPA::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
+    std::shared_ptr< core::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    std::shared_ptr< core::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
     auto const runtimeAdapterType = runtimeAdapterFactory->getType();
     auto const runtimeControllerType = runtimeControllerFactory->getType();

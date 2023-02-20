@@ -9,7 +9,7 @@ RuntimeAdapterFactory::RuntimeAdapterFactory()
 {
 }
 
-std::shared_ptr< COPA::ComponentIf > RuntimeAdapterFactory::create( std::string const &name ) const
+std::shared_ptr< core::ComponentIf > RuntimeAdapterFactory::create( std::string const &name ) const
 {
     std::cout << "RuntimeAdapterFactory::create" << std::endl;
 

@@ -1,8 +1,8 @@
-#include "copa/component/ComponentController.h"
+#include "core/component/ComponentController.h"
 
-#include "copa/factory/FactoryController.h"
+#include "core/factory/FactoryController.h"
 
-namespace COPA
+namespace core
 {
 
 ComponentController::ComponentController()

@@ -1,6 +1,6 @@
-#include "copa/factory/FactoryController.h"
+#include "core/factory/FactoryController.h"
 
-namespace COPA
+namespace core
 {
 
 FactoryController::FactoryController()
