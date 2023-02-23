@@ -1,9 +1,9 @@
 cmake_minimum_required( VERSION 3.15 )
 
 # Set some basic project attributes
-project (runtime
+project( runtime
 		VERSION 0.0.0.11
-		DESCRIPTION "Runtime plugin")
+		DESCRIPTION "Runtime plugin" )
 		
 set( CMAKE_BUILD_TYPE Debug )
 set( CMAKE_CXX_STANDARD 17 )

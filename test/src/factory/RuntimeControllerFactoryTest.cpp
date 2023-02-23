@@ -12,7 +12,7 @@ TEST( RuntimeControllerFactoryTest, create )
     RuntimeControllerFactory runtimeControllerFactory;
 
     std::string const name = std::string( "Daisy Duck" );
-    auto runtimeController = runtimeControllerFactory.create( name );
+    auto const runtimeController = runtimeControllerFactory.create( name );
 
     ASSERT_NE( nullptr, runtimeController );
 
