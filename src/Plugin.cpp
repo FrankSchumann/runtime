@@ -42,7 +42,7 @@ extern "C" void unsubscribePlugin()
     factoryController->unsubscribe( runtimeAdapterType );
     factoryController->unsubscribe( runtimeControllerType );
 
-    std::cout << std::endl;
+    std::cout << "runtime - unsubscribePlugin finished" << std::endl;
 }
 
 extern "C" const char* getName()
