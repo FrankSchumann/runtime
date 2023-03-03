@@ -11,12 +11,12 @@ extern "C" void subscribePlugin()
 {
     std::cout << "runtime - subscribePlugin" << std::endl;
 
-    std::shared_ptr< core::FactoryController > factoryController = std::make_shared< core::FactoryController >();
+    auto factoryController = std::make_shared< core::FactoryController >();
 
-    std::shared_ptr< core::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    //std::shared_ptr< core::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
     std::shared_ptr< core::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
-    factoryController->subscribe( runtimeAdapterFactory );
+    //factoryController->subscribe( runtimeAdapterFactory );
     factoryController->subscribe( runtimeControllerFactory );
 
     std::cout << std::endl;
@@ -26,20 +26,24 @@ extern "C" void unsubscribePlugin()
 {
     std::cout << "runtime - unsubscribePlugin" << std::endl;
 
-    std::shared_ptr< core::ComponentController > componentController = std::make_shared< core::ComponentController >();
+    auto componentController = std::make_shared< core::ComponentController >();
 
-    std::shared_ptr< core::FactoryController > factoryController = std::make_shared< core::FactoryController >();
+    auto factoryController = std::make_shared< core::FactoryController >();
 
-    std::shared_ptr< core::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
-    std::shared_ptr< core::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
+    auto runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    auto runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
     auto const runtimeAdapterType = runtimeAdapterFactory->getType();
     auto const runtimeControllerType = runtimeControllerFactory->getType();
 
-    componentController->erase( runtimeAdapterType );
+    // componentController->erase( runtimeAdapterType );
+    std::cout << "runtime - unsubscribePlugin before erase" << std::endl;
+    componentController->list();
     componentController->erase( runtimeControllerType );
+    //componentController->erase( "RuntimeController" );
+    std::cout << "runtime - unsubscribePlugin after erase" << std::endl;
 
-    factoryController->unsubscribe( runtimeAdapterType );
+    // factoryController->unsubscribe( runtimeAdapterType );
     factoryController->unsubscribe( runtimeControllerType );
 
     std::cout << "runtime - unsubscribePlugin finished" << std::endl;

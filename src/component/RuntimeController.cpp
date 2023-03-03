@@ -14,6 +14,11 @@ void RuntimeController::subscribe( std::string const &name, std::shared_ptr< Run
     runtimes[ name ] = runtime;
 }
 
+void RuntimeController::unsubscribe( std::string const &name )
+{
+    runtimes.erase( name );
+}
+
 std::shared_ptr< RuntimeIf > RuntimeController::get( std::string const &name ) const
 {
     std::shared_ptr< RuntimeIf > result( nullptr );
