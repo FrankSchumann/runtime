@@ -12,6 +12,7 @@ class RuntimeAdapterFactory : public core::FactoryIf
     RuntimeAdapterFactory();
 
     virtual std::shared_ptr< core::ComponentIf > create( std::string const &name ) const override;
+    virtual void cleanup( std::string const &name ) const override {};
     virtual std::string getType() const override;
     virtual std::vector< std::string > getDependencies() const override;
 };
