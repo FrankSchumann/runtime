@@ -18,7 +18,6 @@ TEST( RuntimeControllerFactoryTest, create )
 
     ASSERT_EQ( name, runtimeController->getName() );
     ASSERT_EQ( std::string( "RuntimeController" ), runtimeController->getType() );
-
 }
 
 TEST( RuntimeControllerFactoryTest, getType )

@@ -2,20 +2,16 @@
 
 namespace core
 {
-
 FactoryController::FactoryController()
 {
-
 }
 
 void FactoryController::subscribe( std::shared_ptr< FactoryIf > const factory )
 {
-
 }
 
 void FactoryController::unsubscribe( std::string const &type )
 {
-
 }
 
 std::shared_ptr< FactoryIf > FactoryController::get( std::string const &type ) const
@@ -25,7 +21,6 @@ std::shared_ptr< FactoryIf > FactoryController::get( std::string const &type ) c
 
 void FactoryController::list() const
 {
-
 }
 
 }

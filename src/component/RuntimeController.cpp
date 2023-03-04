@@ -2,20 +2,19 @@
 
 #include <iostream>
 
-std::string const RuntimeController::type = std::string("RuntimeController");
+std::string const RuntimeController::type = std::string( "RuntimeController" );
 
-RuntimeController::RuntimeController( std::string const &_name )
-    : name( _name )
+RuntimeController::RuntimeController( std::string const &_name ) : name( _name )
 {
 }
 
 void RuntimeController::subscribe( std::shared_ptr< RuntimeIf > const runtime )
 {
+    std::string const runtimeName = runtime->getName();
+    runtimes[ runtimeName ] = runtime;
+
     std::cout << "RuntimeController::subscribe "
-              << "name: " << name << std::endl;
-    
-    std::string const name = runtime->getName();
-    runtimes[ name ] = runtime;
+              << "name: " << runtimeName << std::endl;
 }
 
 void RuntimeController::unsubscribe( std::string const &name )

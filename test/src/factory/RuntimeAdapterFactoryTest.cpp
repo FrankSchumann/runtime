@@ -9,7 +9,7 @@ TEST( RuntimeAdapterFactoryTest, Failed )
 
 TEST( RuntimeAdapterFactoryTest, create )
 {
-	RuntimeAdapterFactory runtimeAdapterFactory;
+    RuntimeAdapterFactory runtimeAdapterFactory;
 
     std::string const name = std::string( "Daisy Duck" );
     auto runtimeAdapter = runtimeAdapterFactory.create( name );
@@ -18,7 +18,6 @@ TEST( RuntimeAdapterFactoryTest, create )
 
     ASSERT_EQ( name, runtimeAdapter->getName() );
     ASSERT_EQ( std::string( "RuntimeAdapter" ), runtimeAdapter->getType() );
-
 }
 
 TEST( RuntimeAdapterFactoryTest, getType )

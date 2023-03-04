@@ -10,7 +10,7 @@
 class RuntimeController : public RuntimeControllerIf
 {
    public:
-	RuntimeController( std::string const &_name );
+    RuntimeController( std::string const &_name );
 
     virtual void subscribe( std::shared_ptr< RuntimeIf > const runtime ) override;
     virtual void unsubscribe( std::string const &name ) override;

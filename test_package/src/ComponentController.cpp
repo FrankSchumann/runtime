@@ -4,7 +4,6 @@
 
 namespace core
 {
-
 ComponentController::ComponentController()
 {
 }
@@ -19,7 +18,7 @@ void ComponentController::create( std::string const &type, std::string const &na
 
 std::shared_ptr< ComponentIf > ComponentController::get( std::string const &type, std::string const &name ) const
 {
-	return nullptr;
+    return nullptr;
 }
 
 void ComponentController::erase( std::string const &type, std::string const &name )

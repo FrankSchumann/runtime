@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
-
 #include <core/component/ComponentIf.h>
+
+#include <string>
 
 class RuntimeIf : public core::ComponentIf
 {

@@ -1,18 +1,16 @@
 #include "../component/RuntimeAdapter.h"
 
-#include <iostream>
-
 #include <core/component/ComponentController.h>
 
-std::string const RuntimeAdapter::type = std::string("RuntimeAdapter");
+#include <iostream>
 
-RuntimeAdapter::RuntimeAdapter( std::string const &_name )
-    : RuntimeAdapter( _name, std::make_shared< core::ComponentController >() )
+std::string const RuntimeAdapter::type = std::string( "RuntimeAdapter" );
+
+RuntimeAdapter::RuntimeAdapter( std::string const &_name ) : RuntimeAdapter( _name, std::make_shared< core::ComponentController >() )
 {
 }
 
-RuntimeAdapter::RuntimeAdapter( std::string const &_name, std::shared_ptr< core::ComponentControllerIf > componentController )
-    : name( _name )
+RuntimeAdapter::RuntimeAdapter( std::string const &_name, std::shared_ptr< core::ComponentControllerIf > componentController ) : name( _name )
 {
     auto const runtimeControllerTmp = componentController->get( "RuntimeController", "Mickey Mouse" );
     runtimeController = std::reinterpret_pointer_cast< RuntimeControllerIf >( runtimeControllerTmp );
