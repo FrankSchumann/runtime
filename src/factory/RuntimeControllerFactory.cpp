@@ -13,12 +13,12 @@ std::shared_ptr< core::ComponentIf > RuntimeControllerFactory::create( std::stri
 {
     std::cout << "RuntimeControllerFactory::create" << std::endl;
 
-    return std::make_shared< RuntimeController >( type, name );
+    return std::make_shared< RuntimeController >( name );
 }
 
 std::string RuntimeControllerFactory::getType() const
 {
-    return type;
+    return RuntimeController::type;
 }
 
 std::vector< std::string > RuntimeControllerFactory::getDependencies() const

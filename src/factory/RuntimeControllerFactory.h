@@ -14,7 +14,4 @@ class RuntimeControllerFactory : public core::FactoryIf
     virtual std::shared_ptr< core::ComponentIf > create( std::string const &name ) const override;
     virtual std::string getType() const override;
     virtual std::vector< std::string > getDependencies() const override;
-
-   private:
-    const std::string type = std::string( "RuntimeController" );
 };

@@ -10,7 +10,7 @@
 class RuntimeController : public RuntimeControllerIf
 {
    public:
-	RuntimeController( std::string const &_type, std::string const &_name );
+	RuntimeController( std::string const &_name );
 
     virtual void subscribe( std::string const &name, std::shared_ptr< RuntimeIf > const runtime ) override;
     virtual void unsubscribe( std::string const &name ) override;
@@ -21,9 +21,10 @@ class RuntimeController : public RuntimeControllerIf
     virtual std::string getName() const override;
     virtual std::string getVersion() const override;
 
+    static std::string const type;
+
    private:
     std::map< std::string, std::shared_ptr< RuntimeIf > > runtimes;
 
-    std::string type;
     std::string name;
 };

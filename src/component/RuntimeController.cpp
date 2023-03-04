@@ -2,8 +2,10 @@
 
 #include <iostream>
 
-RuntimeController::RuntimeController( std::string const &_type, std::string const &_name )
-    : type( _type ), name( _name )
+std::string const RuntimeController::type = std::string("RuntimeController");
+
+RuntimeController::RuntimeController( std::string const &_name )
+    : name( _name )
 {
 }
 
@@ -39,7 +41,7 @@ std::map< std::string, std::shared_ptr< RuntimeIf > > RuntimeController::getAll(
 
 std::string RuntimeController::getType() const
 {
-    return type;
+    return RuntimeController::type;
 }
 
 std::string RuntimeController::getName() const
