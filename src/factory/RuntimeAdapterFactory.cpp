@@ -13,12 +13,12 @@ std::shared_ptr< core::ComponentIf > RuntimeAdapterFactory::create( std::string 
 {
     std::cout << "RuntimeAdapterFactory::create" << std::endl;
 
-    return std::make_shared< RuntimeAdapter >( type, name );
+    return std::make_shared< RuntimeAdapter >( name );
 }
 
 std::string RuntimeAdapterFactory::getType() const
 {
-    return type;
+    return RuntimeAdapter::type;
 }
 
 std::vector< std::string > RuntimeAdapterFactory::getDependencies() const

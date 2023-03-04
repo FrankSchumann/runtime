@@ -4,14 +4,15 @@
 
 #include <core/component/ComponentController.h>
 
-RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name )
-    : RuntimeAdapter( _type, _name, std::make_shared< core::ComponentController >() )
+std::string const RuntimeAdapter::type = std::string("RuntimeAdapter");
+
+RuntimeAdapter::RuntimeAdapter( std::string const &_name )
+    : RuntimeAdapter( _name, std::make_shared< core::ComponentController >() )
 {
 }
 
-RuntimeAdapter::RuntimeAdapter( std::string const &_type, std::string const &_name,
-                                std::shared_ptr< core::ComponentControllerIf > componentController )
-    : type( _type ), name( _name )
+RuntimeAdapter::RuntimeAdapter( std::string const &_name, std::shared_ptr< core::ComponentControllerIf > componentController )
+    : name( _name )
 {
     auto const runtimeControllerTmp = componentController->get( "RuntimeController", "Mickey Mouse" );
     runtimeController = std::reinterpret_pointer_cast< RuntimeControllerIf >( runtimeControllerTmp );
@@ -47,7 +48,7 @@ void RuntimeAdapter::stopApplications() const
 
 std::string RuntimeAdapter::getType() const
 {
-    return type;
+    return RuntimeAdapter::type;
 }
 
 std::string RuntimeAdapter::getName() const
