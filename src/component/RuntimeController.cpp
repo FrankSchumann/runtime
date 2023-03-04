@@ -9,10 +9,12 @@ RuntimeController::RuntimeController( std::string const &_name )
 {
 }
 
-void RuntimeController::subscribe( std::string const &name, std::shared_ptr< RuntimeIf > const runtime )
+void RuntimeController::subscribe( std::shared_ptr< RuntimeIf > const runtime )
 {
     std::cout << "RuntimeController::subscribe "
               << "name: " << name << std::endl;
+    
+    std::string const name = runtime->getName();
     runtimes[ name ] = runtime;
 }
 
