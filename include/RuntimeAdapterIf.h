@@ -2,10 +2,10 @@
 
 #include <string>
 
-#include <copa/component/ComponentIf.h>
+#include <core/component/ComponentIf.h>
 #include "RuntimeIf.h"
 
-class RuntimeAdapterIf : public COPA::ComponentIf
+class RuntimeAdapterIf : public core::ComponentIf
 {
    public:
     virtual void startApplications() const = 0;

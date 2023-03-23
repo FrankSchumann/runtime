@@ -12,13 +12,12 @@ TEST( RuntimeControllerFactoryTest, create )
     RuntimeControllerFactory runtimeControllerFactory;
 
     std::string const name = std::string( "Daisy Duck" );
-    auto runtimeController = runtimeControllerFactory.create( name );
+    auto const runtimeController = runtimeControllerFactory.create( name );
 
     ASSERT_NE( nullptr, runtimeController );
 
     ASSERT_EQ( name, runtimeController->getName() );
     ASSERT_EQ( std::string( "RuntimeController" ), runtimeController->getType() );
-
 }
 
 TEST( RuntimeControllerFactoryTest, getType )

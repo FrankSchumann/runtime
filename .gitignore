@@ -30,6 +30,7 @@ NoDebug/
 *.sym
 
 /build/
+*/build/
 /.settings/
 /vxsim_VSB_SIMNTllvm_LP64_ld/
 */test_output/

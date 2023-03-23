@@ -32,12 +32,12 @@ runtime $ cd build
 
 ## Release
 ```bash
-runtime $ cmake .. --preset release
+runtime $ cmake .. --preset=conan-release
 ```
 
 ## Debug
 ```bash
-runtime $ cmake .. --preset debug
+runtime $ cmake .. --preset=conan-debug
 ```
 
 # Build
@@ -54,7 +54,7 @@ runtime/test $ conan install . --output-folder=build
 ```
 ```bash
 runtime/test $ cd build
-runtime/test/build $ cmake .. --preset=release
+runtime/test/build $ cmake .. --preset=conan-release
 ```
 ```bash
 runtime/test/build $ cmake --build . -- -j4

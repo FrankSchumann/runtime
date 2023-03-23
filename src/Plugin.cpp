@@ -1,37 +1,36 @@
+#include <core/component/ComponentController.h>
+#include <core/factory/FactoryController.h>
+
 #include <iostream>
 #include <memory>
 
 #include "config.h"
-#include <copa/factory/FactoryController.h>
-#include <copa/component/ComponentController.h>
 #include "factory/RuntimeAdapterFactory.h"
 #include "factory/RuntimeControllerFactory.h"
 
 extern "C" void subscribePlugin()
 {
-    std::cout << "runtime - subscribePlugin" << std::endl;
+    std::cout << "runtime - subscribePlugin" << std::endl << std::endl;
 
-    std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
+    auto factoryController = std::make_shared< core::FactoryController >();
 
-    std::shared_ptr< COPA::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
-    std::shared_ptr< COPA::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
+    std::shared_ptr< core::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    std::shared_ptr< core::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
     factoryController->subscribe( runtimeAdapterFactory );
     factoryController->subscribe( runtimeControllerFactory );
-
-    std::cout << std::endl;
 }
 
 extern "C" void unsubscribePlugin()
 {
-    std::cout << "runtime - unsubscribePlugin" << std::endl;
+    std::cout << "runtime - unsubscribePlugin" << std::endl << std::endl;
 
-    std::shared_ptr< COPA::ComponentController > componentController = std::make_shared< COPA::ComponentController >();
+    auto componentController = std::make_shared< core::ComponentController >();
 
-    std::shared_ptr< COPA::FactoryController > factoryController = std::make_shared< COPA::FactoryController >();
+    auto factoryController = std::make_shared< core::FactoryController >();
 
-    std::shared_ptr< COPA::FactoryIf > runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
-    std::shared_ptr< COPA::FactoryIf > runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
+    auto runtimeAdapterFactory = std::make_shared< RuntimeAdapterFactory >();
+    auto runtimeControllerFactory = std::make_shared< RuntimeControllerFactory >();
 
     auto const runtimeAdapterType = runtimeAdapterFactory->getType();
     auto const runtimeControllerType = runtimeControllerFactory->getType();
@@ -41,8 +40,6 @@ extern "C" void unsubscribePlugin()
 
     factoryController->unsubscribe( runtimeAdapterType );
     factoryController->unsubscribe( runtimeControllerType );
-
-    std::cout << std::endl;
 }
 
 extern "C" const char* getName()
