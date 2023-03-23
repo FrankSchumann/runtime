@@ -15,6 +15,7 @@ void RuntimeController::subscribe( std::shared_ptr< RuntimeIf > const runtime )
 
     std::cout << "RuntimeController::subscribe "
               << "name: " << runtimeName << std::endl;
+    std::cout << std::endl;
 }
 
 void RuntimeController::unsubscribe( std::string const &name )
