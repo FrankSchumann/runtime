@@ -33,6 +33,7 @@ jobs:
 
     - uses: actions/checkout@v2
       with:
+        token: ${{ secrets.GH_TOKEN }}
         clean: true
 
     - name: Send end
