@@ -36,7 +36,7 @@ jobs:
 
     - uses: actions/checkout@v3
       with:
-#        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.FRANK_TOKEN }}
         clean: true
 
     - name: Send end
