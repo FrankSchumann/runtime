@@ -31,5 +31,9 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
 
+    - uses: actions/checkout@v2
+      with:
+        clean: true
+
     - name: Send end
       run: echo "End"
